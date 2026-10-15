@@ -7,6 +7,30 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0"
+                    Background="#222831">
+
+            <TextBlock Text="My Applications"
+                       Foreground="White"
+                       FontSize="18"
+                       Margin="10"/>
+
+            <Button Content="Stopwatch"
+                    Margin="5"
+                    Click="App1_Click"/>
+
+            <Button Content="To do list"
+                    Margin="5"
+                    Click="App2_Click"/>
+        </StackPanel>
+
+        <Frame x:Name="MainFrame"
+               Grid.Column="1"
+               NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
